@@ -1,4 +1,4 @@
-package com.example.kataapideboranew;
+package com.example.kataapidebora;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
