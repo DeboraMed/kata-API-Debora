@@ -36,9 +36,9 @@ docker-compose up -d
 ```
 
 ## Objetivos de la Kata
-- [ ] Hacer un *fork* del repositorio Git
-- [ ] Crear una nueva  rama (ex. : `usermame/language`)
-- [ ] Añadir un contenedor docker (para el lenguage elegido) al  docker-compose (NO ES NECESARIA ESTA PARTE)
+- [x] Hacer un *fork* del repositorio Git
+- [x] Crear una nueva  rama (ex. : `usermame/language`)
+- [ ] Añadir un contenedor docker (para el lenguage elegido) al docker-compose (NO ES NECESARIA ESTA PARTE)
 ### Objetivos del módulo  
 - [ ] Comprender cómo detectar las diferentes  [peticiones HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
   (GET, POST, PUT, PATCH, DELETE)
@@ -57,7 +57,7 @@ docker-compose up -d
 - [ ] Hacer un documento que explique cómo utilizar la API
   (con ejemplos de cada una de las consultas)
 
-Ir más lejos
+Ir más lejos (Esto no)
 - [ ] Implementar la paginación para consultar que devuelven muchos datos 
     por ejemplo con el método HTTP  HEAD.
   [HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
@@ -75,7 +75,7 @@ Ir más lejos
 |`/beer/{id}`      | Mostrar la cerveza con el id `{id}`     | GET      |
 |`/beer/{id}`      | Eliminar una cerveza                    | DELETE   |
 |`/beer/{id}`      | Modificar una cerveza                   | PUT      |
-|`/beer/{id}`      | Modificar parcialmente una cerveza      | PUT o PATCH    |
+|`/beer/{id}`      | Modificar parcialmente una cerveza      | PUT o PATCH    | //esto no se hace
 |`/breweries`      | Listar todas las cerveceras             | GET      |
 |`/brewerie/{id}`  | Mostrar la cervecera `{id}`             | GET      |
 |`/categories`     | Listar todas las categorías             | GET      |
