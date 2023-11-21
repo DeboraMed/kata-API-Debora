@@ -3,42 +3,44 @@ package com.example.kataapidebora.modelo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Beer {
+public class Breweries {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private int brewery_id;
-
     private String name;
 
-    private int cat_id;
+    private String address1;
 
-    private int style_id;
+    private String address2;
 
-    private float abv;
+    private String city;
 
-    private float ibu;
+    private String state;
 
-    private float srm;
+    private String code;
 
-    private int upc;
+    private String country;
 
-    private String filepath;
+    private String phone;
+
+    private String website;
+
+    private String file_path;
 
     private String descript;
 
     private int add_user;
 
     private String last_mod;
+
 
 
 }
