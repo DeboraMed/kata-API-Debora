@@ -9,35 +9,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Breweries {
+public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String name;
-
-    private String address1;
-
-    private String address2;
-
-    private String city;
-
-    private String state;
-
-    private String code;
-
-    private String country;
-
-    private String phone;
-
-    private String website;
-
-    private String filepath;
-
-    private String descript;
-
-    private int add_user;
+    private String cat_name;
 
     private String last_mod;
 

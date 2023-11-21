@@ -15,13 +15,13 @@ public class Beers {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private int brewery_id;
+    private int brewery_id; // Cruzar con Breweries
 
     private String name;
 
-    private int cat_id;
+    private int cat_id; // Cruzar con Categories
 
-    private int style_id;
+    private int style_id; // Cruzar con Styles
 
     private float abv;
 
