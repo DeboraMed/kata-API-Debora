@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,11 +17,12 @@ public class Styles {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private int cat_id; // cruzar tabla Categories
+    @Column(name = "cat_id")
+    private Long catId; // cruzar tabla Categories
 
     private String style_name;
 
-    private String last_mod;
+    private Date last_mod;
 
 
 }

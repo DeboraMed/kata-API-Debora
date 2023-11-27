@@ -5,39 +5,70 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "beers")
 public class Beers {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private int brewery_id; // Cruzar con Breweries
+    @Column(name = "brewery_id")
+    private Long breweryId;
 
     private String name;
 
-    private int cat_id; // Cruzar con Categories
+    @Column(name = "cat_id")
+    private Long catId;
 
-    private int style_id; // Cruzar con Styles
+    @Column(name = "style_id")
+    private Long styleId;
 
-    private float abv;
+    private Double abv;
 
     private float ibu;
 
     private float srm;
 
-    private int upc;
+    private Long upc;
 
     private String filepath;
 
+    @Column(columnDefinition = "TEXT")
     private String descript;
 
-    private int add_user;
+    @Column(name = "add_user")
+    private Long addUser;
 
-    private String last_mod;
+    @Column(name = "last_mod")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastMod;
+
+    // Constructor, getters y setters
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Double getAbv() {
+        return abv;
+    }
+    public void setAbv(Double abv) {
+        this.abv = abv;
+    }
 
 
 }

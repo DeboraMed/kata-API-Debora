@@ -5,10 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "breweries")
 public class Breweries {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -35,11 +38,32 @@ public class Breweries {
 
     private String filepath;
 
+    @Column(columnDefinition = "TEXT")
     private String descript;
 
-    private int add_user;
+    @Column(name = "add_user")
+    private Long addUser;
 
-    private String last_mod;
+    @Column(name = "last_mod")
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastMod;
+
+
+    // Constructor, getters y setters
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
 }
